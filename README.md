@@ -9,7 +9,7 @@ The first research cut is **16 October 2026**, with a learning increment added o
 - For the overall picture: [First research map](notes/synthesis.md).
 - For the learning materials: [Source index](SOURCES.md).
 - For a concrete first lesson: [Modeling and integrity](notes/01-modeling-and-integrity.md).
-- Continue with [Transactions and derived views](notes/02-transactions-and-derived-views.md), then the [Zanzibar consistency case](notes/zanzibar-content-authorization-consistency.md).
+- Continue with [Transactions and derived views](notes/02-transactions-and-derived-views.md), [Schema evolution and stable identity](notes/03-schema-evolution-and-stable-identity.md), and the [Zanzibar consistency case](notes/zanzibar-content-authorization-consistency.md).
 
 ## Reading route
 
@@ -17,7 +17,7 @@ The first research cut is **16 October 2026**, with a learning increment added o
 2. **Implementation costs and systems tradeoffs.** Use the completed CMU 15-445/645 Fall 2025 course as an implementation companion. Read *Designing Data-Intensive Applications*, second edition, for authoritative versus derived data, evolution, and end-to-end correctness. Work through [Module 2](notes/02-transactions-and-derived-views.md) for concurrent checkout, isolation, and derived-view maintenance. See the selected route in [Foundations](notes/foundations.md) and the learning guide in [Lifecycle engineering](notes/lifecycle.md).
 3. **Meaning, evidence, and interoperability.** Study knowledge-graph foundations and a bounded RDF/RDFS, OWL, SHACL, SKOS, and PROV-O packet. Distinguish inference from validation, identity from labels, and provenance from truth. Start with [Foundations](notes/foundations.md).
 4. **Real systems and their constraints.** Compare Wikidata/Wikibase, Gene Ontology/OBO, and Uber Databook. Add GitLab Handbook as a document-oriented counterpoint. The [case studies](notes/production-systems.md) explain what each source establishes and where empirical evidence remains weak.
-5. **Change, evaluation, and the frontier.** Study [Lifecycle engineering](notes/lifecycle.md), [Evaluation and research gaps](notes/evaluation-gaps.md), and [Frontier readings](notes/frontier-readings.md). DBSP concerns incremental maintenance; LOTUS concerns semantic operators and optimization; SemBench concerns workload-level evaluation. Their guarantees are different.
+5. **Change, evaluation, and the frontier.** Study [Lifecycle engineering](notes/lifecycle.md), [Evaluation and research gaps](notes/evaluation-gaps.md), and [Frontier readings](notes/frontier-readings.md). DBSP concerns incremental maintenance; LOTUS concerns semantic operators and optimization; SemBench concerns workload-level evaluation. Their guarantees are different. For a worked mixed-version migration and semantic identity changes, read [Module 3](notes/03-schema-evolution-and-stable-identity.md).
 6. **Reconcile the lessons.** Return to the [synthesis](notes/synthesis.md), its ordinary-domain examples, and its bounded next-reading questions. Do not infer a universal architecture from a successful case.
 
 This round deliberately studies general database and knowledge-system design before transferring ideas to a specialized domain. It selects no product stack.
@@ -29,6 +29,7 @@ This round deliberately studies general database and knowledge-system design bef
 | [Foundations](notes/foundations.md) | Which conceptual distinctions and learning resources should anchor the study? |
 | [Modeling and integrity](notes/01-modeling-and-integrity.md) | What do keys, normalization, and constraints actually guarantee? |
 | [Transactions and derived views](notes/02-transactions-and-derived-views.md) | What do transactions protect, and when do derived answers become current? |
+| [Schema evolution and stable identity](notes/03-schema-evolution-and-stable-identity.md) | Which changes preserve meaning, compatibility, and historical interpretation? |
 | [Zanzibar consistency case](notes/zanzibar-content-authorization-consistency.md) | Which permission snapshot may authorize which content version? |
 | [Production systems](notes/production-systems.md) | How do mature systems organize meaning, authority, evidence, and serving? |
 | [Lifecycle engineering](notes/lifecycle.md) | What must happen when sources, claims, schemas, or permissions change? |
@@ -39,7 +40,7 @@ This round deliberately studies general database and knowledge-system design bef
 ## Evidence and reading status
 
 - The collection includes source screening, selected close readings, and original synthesis. Listing a book does **not** mean it has been read in full. Individual notes document inspected sections and access limitations.
-- Modules 1 and 2 and the Zanzibar case contain prose-reviewed examples and proposed tests. SQL and concurrent schedules were **not executed**; no benchmark, deployment, or user study was run.
+- Modules 1–3 and the Zanzibar case contain prose-reviewed examples and proposed tests. SQL and concurrent schedules were **not executed**; no benchmark, deployment, or user study was run.
 - Historical production measurements remain historical; they are not current service guarantees. Preprints and draft standards are labeled separately from published papers and stable recommendations.
 - Proposed experiments and next exercises are **unperformed** unless a later note records their execution.
 - Publicly available source material is linked and attributed. The repository contains study notes, not redistributed textbooks or a claim to their rights.

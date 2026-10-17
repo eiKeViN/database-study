@@ -54,3 +54,13 @@ Comparative analysis: [Production systems](notes/production-systems.md). Operati
 - **Wikidata quality study (2021).** [Paper record](https://arxiv.org/abs/2107.00156). Why removal is an imperfect error proxy; preserve the denominator of each reported result.
 
 The [evaluation memo](notes/evaluation-gaps.md) contains additional primary references and proposed tests. The [synthesis](notes/synthesis.md) distinguishes mature guarantees, deployed patterns, frontier evidence, and questions that remain open within this bounded review.
+
+## 6. Schema evolution and stable identity
+
+Added **17 October 2026**. [Module 3](notes/03-schema-evolution-and-stable-identity.md) works through a mixed-version label migration, write-intent and stale-backfill hazards, rename versus changed meaning, exact replacement, splits, and historical queries. All schedules and acceptance checks are reasoned, unexecuted examples.
+
+- **GitLab migration guidance.** [Avoiding downtime in migrations](https://docs.gitlab.com/development/database/avoiding_downtime_in_migrations/). Phased column changes and old-client dependencies, not a universal zero-downtime guarantee.
+- **PostgreSQL 18 ALTER TABLE.** [Reference](https://www.postgresql.org/docs/18/sql-altertable.html). Staged constraint validation and locking; not proof of semantic migration correctness.
+- **OBO and GO semantic-change policies.** [OBO term stability](https://obofoundry.org/principles/fp-019-term-stability.html), [GO documentation](https://geneontology.org/docs/ontology-documentation/), and [the GO 2026 update paper](https://doi.org/10.1093/nar/gkaf1292). Distinguish historical alternate-ID merges from the reported later obsoletion/replacement procedure.
+
+The [Module 3 evidence ledger](notes/03-schema-evolution-evidence.md) records inspected sections, source-version limits, and the GO policy reconciliation.
