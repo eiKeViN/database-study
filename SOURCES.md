@@ -1,6 +1,6 @@
 # Source index
 
-Selected learning spine and primary-source entry points, checked for the first research cut on **16 October 2026**. This index is a navigation aid; the linked local notes contain finer-grained references, inspected sections, evidence ledgers, and limitations. A listing is not a full-reading claim.
+Selected learning spine and primary-source entry points, checked for the first research cut on **16 October 2026**. This index is a navigation aid; the linked local notes contain finer-grained references, inspected sections, evidence ledgers, and limitations. A listing is not a full-reading claim. The transactions and Zanzibar close-reading records were added on **17 October 2026**.
 
 ## 1. Core books and courses
 
@@ -16,6 +16,8 @@ Selected learning spine and primary-source entry points, checked for the first r
 - **Codd (1970), A Relational Model of Data for Large Shared Data Banks.** [DOI](https://doi.org/10.1145/362384.362685). Data independence and the original relational proposal. Do not attribute the full later BCNF theory to this paper. [Close-reading lesson](notes/01-modeling-and-integrity.md).
 - **Chen (1976), The Entity-Relationship Model—Toward a Unified View of Data.** [DOI](https://doi.org/10.1145/320434.320440). Conceptual entities, relationships, roles, identification, and representation. [Close-reading lesson](notes/01-modeling-and-integrity.md).
 - **PostgreSQL 18 documentation.** [Constraints](https://www.postgresql.org/docs/18/ddl-constraints.html), [partial indexes](https://www.postgresql.org/docs/18/indexes-partial.html), [CREATE VIEW](https://www.postgresql.org/docs/18/sql-createview.html). Concrete implementation boundaries, including NULL behavior and view updatability; not claims about all SQL systems. [Lesson](notes/01-modeling-and-integrity.md).
+
+- **PostgreSQL 18 transactions and maintenance.** [Isolation](https://www.postgresql.org/docs/18/transaction-iso.html), [explicit locking](https://www.postgresql.org/docs/18/explicit-locking.html), [serialization retries](https://www.postgresql.org/docs/18/mvcc-serialization-failure-handling.html), [materialized-view refresh](https://www.postgresql.org/docs/18/sql-refreshmaterializedview.html), [logical decoding](https://www.postgresql.org/docs/18/logicaldecoding-explanation.html). See [Module 2](notes/02-transactions-and-derived-views.md) and its [section-level evidence ledger](notes/02-source-evidence-ledger.md). Reasoned schedules, not executed experiments.
 
 ## 3. Knowledge representation and stable standards
 
@@ -36,7 +38,7 @@ See [Foundations](notes/foundations.md) for version cautions. RDF 1.2 and SHACL 
 - **Uber Databook.** [2018 engineering account](https://www.uber.com/au/en/blog/databook/), [2020 engineering account](https://www.uber.com/py/en/blog/metadata-insights-databook/). Dated reports of metadata collection, schema governance, logs, and derived serving indexes; not verification of current private infrastructure.
 - **GitLab Handbook.** [Usage and governance](https://handbook.gitlab.com/handbook/about/handbook-usage/), [editing](https://handbook.gitlab.com/handbook/about/editing-handbook/), [search](https://handbook.gitlab.com/docs/search/). Document-level ownership and review as a legitimate mature knowledge-system design.
 - **XTDB temporal documentation.** [Time in XTDB](https://docs.xtdb.com/about/time-in-xtdb.html). Concrete valid-time versus system-time distinctions, without a product recommendation.
-- **Zanzibar (USENIX ATC 2019).** [Paper](https://www.usenix.org/system/files/atc19-pang.pdf). Content and authorization consistency; historical performance is not a universal service promise.
+- **Zanzibar (USENIX ATC 2019).** [Paper](https://www.usenix.org/system/files/atc19-pang.pdf). Content and authorization consistency; historical performance is not a universal service promise. [Close-reading case](notes/zanzibar-content-authorization-consistency.md) and [source ledger](notes/zanzibar-sources.md), added 17 October 2026.
 
 Comparative analysis: [Production systems](notes/production-systems.md). Operational consequences: [Lifecycle engineering](notes/lifecycle.md).
 
